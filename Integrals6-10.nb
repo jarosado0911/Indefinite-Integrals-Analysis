@@ -1,0 +1,2682 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     89627,       2673]
+NotebookOptionsPosition[     87785,       2609]
+NotebookOutlinePosition[     88147,       2625]
+CellTagsIndexPosition[     88104,       2622]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "6"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "This", " ", "verified", " ", "the", " ", "integral", " ", "for", " ", 
+      "r"}], " ", "\[Element]", " ", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", "a"}]}]}], ")"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.600551535135461*^9, 3.6005515480538473`*^9}, {
+  3.6005520306572027`*^9, 3.600552060270753*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Int6", "[", 
+   RowBox[{"a_", ",", "r_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"a", "-", 
+      RowBox[{"r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}], 
+     RowBox[{
+      RowBox[{"a", "^", "2"}], "+", 
+      RowBox[{"r", "^", "2"}], "-", 
+      RowBox[{"2", "*", "a", "*", "r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}]], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.600551551912018*^9, 3.600551646653322*^9}, {
+  3.600551692557394*^9, 3.6005516932142763`*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IntAns6", "[", "a_", "]"}], ":=", 
+  RowBox[{"2", "*", 
+   RowBox[{"Pi", "/", "a"}]}]}]], "Input",
+ CellChangeTimes->{{3.6005519276902323`*^9, 3.6005519474694147`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Int6", "[", 
+     RowBox[{"a", ",", "r"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "7"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", 
+      RowBox[{"a", "-", "1"}]}], "}"}]}], "]"}], "//", "TableForm"}]], "Input",\
+
+ CellChangeTimes->{{3.600551653967114*^9, 3.6005517420620337`*^9}, {
+  3.600551786069624*^9, 3.600551839435368*^9}, {3.6005519838385973`*^9, 
+  3.600551990777878*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+     "2", " ", 
+      "\[Pi]"}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", \
+"\<\"\"\>"},
+    {"\[Pi]", 
+     "\[Pi]", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      "3"], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{2 Pi}, {Pi, Pi}, {
+    Rational[2, 3] Pi, Rational[2, 3] Pi, Rational[2, 3] Pi}, {
+    Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[1, 2] 
+     Pi}, {Rational[2, 5] Pi, Rational[2, 5] Pi, Rational[2, 5] Pi, 
+     Rational[2, 5] Pi, Rational[2, 5] Pi}, {
+    Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] 
+     Pi, Rational[1, 3] Pi, Rational[1, 3] Pi}, {
+    Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] 
+     Pi, Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] 
+     Pi}}]]], "Output",
+ CellChangeTimes->{{3.60055173380089*^9, 3.600551743107832*^9}, {
+   3.600551790365172*^9, 3.600551840363922*^9}, 3.600551985424507*^9, 
+   3.6005520234986258`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"IntAns6", "[", "a", "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "7"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", 
+      RowBox[{"a", "-", "1"}]}], "}"}]}], "]"}], "//", "TableForm"}]], "Input",\
+
+ CellChangeTimes->{{3.600551950717475*^9, 3.600551994481319*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     RowBox[{
+     "2", " ", 
+      "\[Pi]"}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", \
+"\<\"\"\>"},
+    {"\[Pi]", 
+     "\[Pi]", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], 
+      "3"], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "2"], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "5"], "\<\"\"\>", "\<\"\"\>"},
+    {
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], 
+     FractionBox["\[Pi]", "3"], "\<\"\"\>"},
+    {
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "7"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{2 Pi}, {Pi, Pi}, {
+    Rational[2, 3] Pi, Rational[2, 3] Pi, Rational[2, 3] Pi}, {
+    Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[1, 2] 
+     Pi}, {Rational[2, 5] Pi, Rational[2, 5] Pi, Rational[2, 5] Pi, 
+     Rational[2, 5] Pi, Rational[2, 5] Pi}, {
+    Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] 
+     Pi, Rational[1, 3] Pi, Rational[1, 3] Pi}, {
+    Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] 
+     Pi, Rational[2, 7] Pi, Rational[2, 7] Pi, Rational[2, 7] 
+     Pi}}]]], "Output",
+ CellChangeTimes->{{3.600551964620126*^9, 3.600551994929253*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "7"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "This", " ", "verifie", " ", "the", " ", "integral", " ", "for", " ", 
+         "r"}], " ", "\[Element]", 
+        RowBox[{"[", 
+         RowBox[{"0", ",", "a"}]}]}], ")"}], " ", "and", " ", "n"}], " ", "=",
+      " ", "1"}], ",", "2", ",", "3", ",", "4", ",", "5", ",", 
+    RowBox[{"6", "..."}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.600552116124116*^9, 3.6005521234154987`*^9}, {
+  3.6005526853436337`*^9, 3.600552719550096*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int7", "[", 
+   RowBox[{"a_", ",", "r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"a", "-", 
+      RowBox[{"r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}], 
+     RowBox[{
+      RowBox[{"a", "^", "2"}], "+", 
+      RowBox[{"r", "^", "2"}], "-", 
+      RowBox[{"2", "*", "a", "*", "r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}]], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns7", "[", 
+   RowBox[{"a_", ",", "r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"r", "^", "n"}], "/", 
+    RowBox[{"a", "^", 
+     RowBox[{"(", 
+      RowBox[{"n", "+", "1"}], ")"}]}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.600552126550294*^9, 3.600552197670205*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Int7", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", 
+        RowBox[{"a", "-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600552258253203*^9, 3.6005523517334146`*^9}, {
+  3.600552388730405*^9, 3.600552396424324*^9}, {3.600552427862462*^9, 
+  3.600552428060705*^9}, {3.600552470207877*^9, 3.600552496885426*^9}, {
+  3.600552550587916*^9, 3.600552550727151*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "16"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "9"]},
+       {
+        FractionBox["\[Pi]", "27"]},
+       {
+        FractionBox["\[Pi]", "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "9"]},
+       {
+        FractionBox[
+         RowBox[{"4", " ", "\[Pi]"}], "27"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "64"]},
+       {
+        FractionBox["\[Pi]", "256"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "32"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "16"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "64"]},
+       {
+        FractionBox[
+         RowBox[{"27", " ", "\[Pi]"}], "256"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{0, 0, 
+    0}}, {{0, 0, 0}, {
+     Rational[1, 4] Pi, Rational[1, 8] Pi, Rational[1, 16] Pi}}, {{0, 0, 0}, {
+     Rational[1, 9] Pi, Rational[1, 27] Pi, Rational[1, 81] Pi}, {
+     Rational[2, 9] Pi, Rational[4, 27] Pi, Rational[8, 81] Pi}}, {{0, 0, 
+     0}, {Rational[1, 16] Pi, Rational[1, 64] Pi, Rational[1, 256] Pi}, {
+     Rational[1, 8] Pi, Rational[1, 16] Pi, Rational[1, 32] Pi}, {
+     Rational[3, 16] Pi, Rational[9, 64] Pi, Rational[27, 256] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{{3.600552297582966*^9, 3.6005523227765903`*^9}, {
+   3.600552383619945*^9, 3.600552403417651*^9}, 3.600552436267316*^9, {
+   3.60055247546996*^9, 3.600552500682888*^9}, 3.6005525530600653`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"IntAns7", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", 
+        RowBox[{"a", "-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600552451361473*^9, 3.60055246459191*^9}, {
+  3.6005525079023247`*^9, 3.600552534475528*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "16"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "9"]},
+       {
+        FractionBox["\[Pi]", "27"]},
+       {
+        FractionBox["\[Pi]", "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "9"]},
+       {
+        FractionBox[
+         RowBox[{"4", " ", "\[Pi]"}], "27"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "64"]},
+       {
+        FractionBox["\[Pi]", "256"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "32"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "16"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "64"]},
+       {
+        FractionBox[
+         RowBox[{"27", " ", "\[Pi]"}], "256"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{0, 0, 
+    0}}, {{0, 0, 0}, {
+     Rational[1, 4] Pi, Rational[1, 8] Pi, Rational[1, 16] Pi}}, {{0, 0, 0}, {
+     Rational[1, 9] Pi, Rational[1, 27] Pi, Rational[1, 81] Pi}, {
+     Rational[2, 9] Pi, Rational[4, 27] Pi, Rational[8, 81] Pi}}, {{0, 0, 
+     0}, {Rational[1, 16] Pi, Rational[1, 64] Pi, Rational[1, 256] Pi}, {
+     Rational[1, 8] Pi, Rational[1, 16] Pi, Rational[1, 32] Pi}, {
+     Rational[3, 16] Pi, Rational[9, 64] Pi, Rational[27, 256] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{{3.600552453068874*^9, 3.6005524785075893`*^9}, {
+  3.600552512032892*^9, 3.6005525349548817`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "8"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+       RowBox[{
+        RowBox[{
+        "This", " ", "verifie", " ", "the", " ", "integral", " ", "for", " ", 
+         "r"}], " ", "\[Element]", 
+        RowBox[{"[", 
+         RowBox[{"0", ",", "a"}]}]}], ")"}], " ", "and", " ", "n"}], " ", "=",
+      " ", "1"}], ",", "2", ",", "3", ",", "4", ",", "5", ",", 
+    RowBox[{"6", "..."}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.6006266487749977`*^9, 3.600626657188224*^9}, {
+  3.6006268726347427`*^9, 3.6006268741709967`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int8", "[", 
+   RowBox[{"n_", ",", "r_", ",", "a_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "x", "]"}]}], 
+     RowBox[{
+      RowBox[{"a", "^", "2"}], "+", 
+      RowBox[{"r", "^", "2"}], "-", 
+      RowBox[{"2", "*", "a", "*", "r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}]], "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns8", "[", 
+   RowBox[{"n_", ",", "r_", ",", "a_"}], "]"}], ":=", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"r", "^", "n"}], "/", 
+    RowBox[{"a", "^", 
+     RowBox[{"(", 
+      RowBox[{"n", "+", "1"}], ")"}]}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.600626669665174*^9, 3.600626749131866*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Int8", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", 
+        RowBox[{"a", "-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600626786200642*^9, 3.60062678649557*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "27"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "32"]},
+       {
+        FractionBox["\[Pi]", "243"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox[
+         RowBox[{"16", " ", "\[Pi]"}], "243"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "81"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "81"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{0, 0, 
+    0}}, {{0, 0, 0}, {Pi, Rational[1, 8] Pi, Rational[1, 27] Pi}}, {{0, 0, 
+     0}, {Pi, Rational[1, 16] Pi, Rational[1, 81] Pi}, {
+     Rational[1, 8] Pi, Rational[1, 2] Pi, Rational[8, 81] Pi}}, {{0, 0, 0}, {
+     Pi, Rational[1, 32] Pi, Rational[1, 243] Pi}, {
+     Rational[1, 16] Pi, Rational[1, 2] Pi, Rational[16, 243] Pi}, {
+     Rational[1, 81] Pi, Rational[8, 81] Pi, Rational[1, 3] Pi}}}]]], "Output",\
+
+ CellChangeTimes->{3.6006267915246*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"IntAns8", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", "0", ",", 
+        RowBox[{"a", "-", "1"}]}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600626803773946*^9, 3.600626803965066*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox["\[Pi]", "27"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"8", " ", "\[Pi]"}]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "81"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {"0"},
+       {"0"},
+       {"0"}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {"\[Pi]"},
+       {
+        FractionBox["\[Pi]", "32"]},
+       {
+        FractionBox["\[Pi]", "243"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"16", " ", "\[Pi]"}]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox[
+         RowBox[{"16", " ", "\[Pi]"}], "243"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"81", " ", "\[Pi]"}]},
+       {
+        FractionBox[
+         RowBox[{"81", " ", "\[Pi]"}], "32"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{0, 0, 
+    0}}, {{0, 0, 0}, {Pi, Rational[1, 8] Pi, Rational[1, 27] Pi}}, {{0, 0, 
+     0}, {Pi, Rational[1, 16] Pi, Rational[1, 81] Pi}, {
+     8 Pi, Rational[1, 2] Pi, Rational[8, 81] Pi}}, {{0, 0, 0}, {
+     Pi, Rational[1, 32] Pi, Rational[1, 243] Pi}, {
+     16 Pi, Rational[1, 2] Pi, Rational[16, 243] Pi}, {
+     81 Pi, Rational[81, 32] Pi, Rational[1, 3] Pi}}}]]], "Output",
+ CellChangeTimes->{3.600626804736664*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "9"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "The", " ", "following", " ", "calculations", " ", "verify", " ", "the",
+        " ", "integral", " ", "for", " ", "r"}], " ", ">", " ", 
+      RowBox[{"a", " ", "and", " ", "n"}]}], " ", "=", " ", "1"}], ",", "2", 
+    ",", "3", ",", "4", ",", 
+    RowBox[{"5", "..."}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.600626905711725*^9, 3.600626914344224*^9}, {
+  3.600627239064569*^9, 3.6006272719418497`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int9", "[", 
+   RowBox[{"a_", ",", "r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"a", "-", 
+      RowBox[{"r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}], 
+     RowBox[{
+      RowBox[{"a", "^", "2"}], "+", 
+      RowBox[{"r", "^", "2"}], "-", 
+      RowBox[{"2", "*", "a", "*", "r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}]], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns9", "[", 
+   RowBox[{"a_", ",", "r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   RowBox[{"-", "Pi"}], "*", 
+   RowBox[{
+    RowBox[{"a", "^", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]}], "/", 
+    RowBox[{"r", "^", "n"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.600626917218021*^9, 3.60062698566199*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Int9", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", 
+        RowBox[{"a", "+", "1"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600626999229561*^9, 3.600627021443499*^9}, {
+  3.60062705450175*^9, 3.600627082083763*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "2"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "8"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "3"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "16"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "64"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "36"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "216"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "3"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "8"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "16"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "18"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "54"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"3", " ", "\[Pi]"}], "16"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"9", " ", "\[Pi]"}], "64"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"3", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"9", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "12"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "24"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"16", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{Rational[-1, 2] Pi, Rational[-1, 4] Pi, Rational[-1, 8] Pi}, {
+     Rational[-1, 3] Pi, Rational[-1, 9] Pi, Rational[-1, 27] Pi}, {
+     Rational[-1, 4] Pi, Rational[-1, 16] Pi, Rational[-1, 64] Pi}, {
+     Rational[-1, 5] Pi, Rational[-1, 25] Pi, Rational[-1, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 36] Pi, Rational[-1, 216] Pi}}, {{
+     Rational[-1, 3] Pi, Rational[-2, 9] Pi, Rational[-4, 27] Pi}, {
+     Rational[-1, 4] Pi, Rational[-1, 8] Pi, Rational[-1, 16] Pi}, {
+     Rational[-1, 5] Pi, Rational[-2, 25] Pi, Rational[-4, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 18] Pi, Rational[-1, 54] Pi}}, {{
+     Rational[-1, 4] Pi, Rational[-3, 16] Pi, Rational[-9, 64] Pi}, {
+     Rational[-1, 5] Pi, Rational[-3, 25] Pi, Rational[-9, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 12] Pi, Rational[-1, 24] Pi}}, {{
+     Rational[-1, 5] Pi, Rational[-4, 25] Pi, Rational[-16, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 9] Pi, Rational[-2, 27] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{{3.6006270038902817`*^9, 3.60062706027225*^9}, 
+   3.600627102116781*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"IntAns9", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", 
+        RowBox[{"a", "+", "1"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600627073279462*^9, 3.600627084939616*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "2"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "8"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "3"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "16"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "64"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "36"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "216"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "3"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "8"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "16"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "18"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "54"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "4"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"3", " ", "\[Pi]"}], "16"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"9", " ", "\[Pi]"}], "64"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"3", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"9", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "12"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "24"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "5"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"4", " ", "\[Pi]"}], "25"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"16", " ", "\[Pi]"}], "125"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "6"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox["\[Pi]", "9"]}]},
+       {
+        RowBox[{"-", 
+         FractionBox[
+          RowBox[{"2", " ", "\[Pi]"}], "27"]}]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{Rational[-1, 2] Pi, Rational[-1, 4] Pi, Rational[-1, 8] Pi}, {
+     Rational[-1, 3] Pi, Rational[-1, 9] Pi, Rational[-1, 27] Pi}, {
+     Rational[-1, 4] Pi, Rational[-1, 16] Pi, Rational[-1, 64] Pi}, {
+     Rational[-1, 5] Pi, Rational[-1, 25] Pi, Rational[-1, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 36] Pi, Rational[-1, 216] Pi}}, {{
+     Rational[-1, 3] Pi, Rational[-2, 9] Pi, Rational[-4, 27] Pi}, {
+     Rational[-1, 4] Pi, Rational[-1, 8] Pi, Rational[-1, 16] Pi}, {
+     Rational[-1, 5] Pi, Rational[-2, 25] Pi, Rational[-4, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 18] Pi, Rational[-1, 54] Pi}}, {{
+     Rational[-1, 4] Pi, Rational[-3, 16] Pi, Rational[-9, 64] Pi}, {
+     Rational[-1, 5] Pi, Rational[-3, 25] Pi, Rational[-9, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 12] Pi, Rational[-1, 24] Pi}}, {{
+     Rational[-1, 5] Pi, Rational[-4, 25] Pi, Rational[-16, 125] Pi}, {
+     Rational[-1, 6] Pi, Rational[-1, 9] Pi, Rational[-2, 27] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{{3.6006270743910513`*^9, 3.6006270853971777`*^9}}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "10"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+      RowBox[{
+      "The", " ", "following", " ", "calculations", " ", "verify", " ", "the",
+        " ", "integral", " ", "for", " ", "r"}], " ", ">", " ", 
+      RowBox[{"a", " ", "and", " ", "n"}]}], " ", "=", " ", "1"}], ",", "2", 
+    ",", "3", ",", "4", ",", 
+    RowBox[{"5", "..."}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.600627197928327*^9, 3.60062720388874*^9}, {
+  3.600627363378366*^9, 3.600627364113961*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int10", "[", 
+   RowBox[{"n_", ",", "r_", ",", "a_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    FractionBox[
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "x", "]"}]}], 
+     RowBox[{
+      RowBox[{"a", "^", "2"}], "+", 
+      RowBox[{"r", "^", "2"}], "-", 
+      RowBox[{"2", "*", "a", "*", "r", "*", 
+       RowBox[{"Cos", "[", "x", "]"}]}]}]], "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns10", "[", 
+   RowBox[{"n_", ",", "r_", ",", "a_"}], "]"}], ":=", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"a", "^", 
+     RowBox[{"(", 
+      RowBox[{"n", "-", "1"}], ")"}]}], "/", 
+    RowBox[{"r", "^", "n"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.6006272060246887`*^9, 3.6006272320889807`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"Int10", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", 
+        RowBox[{"a", "+", "1"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.600627311390497*^9, 3.6006273116208982`*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "9"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "3"]},
+       {
+        FractionBox["\[Pi]", "3"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "4"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "5"]},
+       {
+        FractionBox["\[Pi]", "5"]},
+       {
+        FractionBox["\[Pi]", "5"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "6"]},
+       {
+        FractionBox["\[Pi]", "6"]},
+       {
+        FractionBox["\[Pi]", "6"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "9"]},
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "9"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "16"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "25"]},
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "25"]},
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "25"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "36"]},
+       {
+        FractionBox["\[Pi]", "18"]},
+       {
+        FractionBox["\[Pi]", "12"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "64"]},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "64"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "125"]},
+       {
+        FractionBox[
+         RowBox[{"4", " ", "\[Pi]"}], "125"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "125"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "216"]},
+       {
+        FractionBox["\[Pi]", "54"]},
+       {
+        FractionBox["\[Pi]", "24"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "625"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "625"]},
+       {
+        FractionBox[
+         RowBox[{"27", " ", "\[Pi]"}], "625"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "1296"]},
+       {
+        FractionBox["\[Pi]", "162"]},
+       {
+        FractionBox["\[Pi]", "48"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[2, 9] Pi}, {
+     Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] Pi}, {
+     Rational[1, 4] Pi, Rational[1, 4] Pi, Rational[1, 4] Pi}, {
+     Rational[1, 5] Pi, Rational[1, 5] Pi, Rational[1, 5] Pi}, {
+     Rational[1, 6] Pi, Rational[1, 6] Pi, Rational[1, 6] Pi}}, {{
+     Rational[1, 9] Pi, Rational[2, 9] Pi, Rational[1, 3] Pi}, {
+     Rational[1, 16] Pi, Rational[1, 8] Pi, Rational[3, 16] Pi}, {
+     Rational[1, 25] Pi, Rational[2, 25] Pi, Rational[3, 25] Pi}, {
+     Rational[1, 36] Pi, Rational[1, 18] Pi, Rational[1, 12] Pi}}, {{
+     Rational[1, 64] Pi, Rational[1, 16] Pi, Rational[9, 64] Pi}, {
+     Rational[1, 125] Pi, Rational[4, 125] Pi, Rational[9, 125] Pi}, {
+     Rational[1, 216] Pi, Rational[1, 54] Pi, Rational[1, 24] Pi}}, {{
+     Rational[1, 625] Pi, Rational[8, 625] Pi, Rational[27, 625] Pi}, {
+     Rational[1, 1296] Pi, Rational[1, 162] Pi, Rational[1, 48] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{3.6006273182915916`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Table", "[", 
+     RowBox[{
+      RowBox[{"IntAns10", "[", 
+       RowBox[{"a", ",", "r", ",", "n"}], "]"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"r", ",", 
+        RowBox[{"a", "+", "1"}], ",", "6"}], "}"}], ",", 
+      RowBox[{"{", 
+       RowBox[{"n", ",", "1", ",", "3"}], "}"}]}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"a", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.60062732577385*^9, 3.6006273273806*^9}}],
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox["\[Pi]", "2"]},
+       {
+        FractionBox["\[Pi]", "2"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "3"]},
+       {
+        FractionBox["\[Pi]", "3"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "4"]},
+       {
+        FractionBox["\[Pi]", "4"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "5"]},
+       {
+        FractionBox["\[Pi]", "5"]},
+       {
+        FractionBox["\[Pi]", "5"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "6"]},
+       {
+        FractionBox["\[Pi]", "6"]},
+       {
+        FractionBox["\[Pi]", "6"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}]},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "9"]},
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "9"]},
+       {
+        FractionBox["\[Pi]", "3"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox["\[Pi]", "8"]},
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "16"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "25"]},
+       {
+        FractionBox[
+         RowBox[{"2", " ", "\[Pi]"}], "25"]},
+       {
+        FractionBox[
+         RowBox[{"3", " ", "\[Pi]"}], "25"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "36"]},
+       {
+        FractionBox["\[Pi]", "18"]},
+       {
+        FractionBox["\[Pi]", "12"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>"},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "64"]},
+       {
+        FractionBox["\[Pi]", "16"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "64"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "125"]},
+       {
+        FractionBox[
+         RowBox[{"4", " ", "\[Pi]"}], "125"]},
+       {
+        FractionBox[
+         RowBox[{"9", " ", "\[Pi]"}], "125"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "216"]},
+       {
+        FractionBox["\[Pi]", "54"]},
+       {
+        FractionBox["\[Pi]", "24"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>"},
+    {GridBox[{
+       {
+        FractionBox["\[Pi]", "625"]},
+       {
+        FractionBox[
+         RowBox[{"8", " ", "\[Pi]"}], "625"]},
+       {
+        FractionBox[
+         RowBox[{"27", " ", "\[Pi]"}], "625"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, "RowsIndexed" -> {}}], GridBox[{
+       {
+        FractionBox["\[Pi]", "1296"]},
+       {
+        FractionBox["\[Pi]", "162"]},
+       {
+        FractionBox["\[Pi]", "48"]}
+      },
+      GridBoxAlignment->{
+       "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+        "RowsIndexed" -> {}},
+      GridBoxSpacings->{"Columns" -> {
+          Offset[0.27999999999999997`], {
+           Offset[0.7]}, 
+          Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+          Offset[0.2], {
+           Offset[0.1]}, 
+          Offset[0.2]}, 
+        "RowsIndexed" -> {}}], "\<\"\"\>", "\<\"\"\>", "\<\"\"\>"}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[2.0999999999999996`]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  TableForm[{{{Rational[1, 2] Pi, Rational[1, 2] Pi, Rational[1, 2] Pi}, {
+     Rational[1, 3] Pi, Rational[1, 3] Pi, Rational[1, 3] Pi}, {
+     Rational[1, 4] Pi, Rational[1, 4] Pi, Rational[1, 4] Pi}, {
+     Rational[1, 5] Pi, Rational[1, 5] Pi, Rational[1, 5] Pi}, {
+     Rational[1, 6] Pi, Rational[1, 6] Pi, Rational[1, 6] Pi}}, {{
+     Rational[1, 9] Pi, Rational[2, 9] Pi, Rational[1, 3] Pi}, {
+     Rational[1, 16] Pi, Rational[1, 8] Pi, Rational[3, 16] Pi}, {
+     Rational[1, 25] Pi, Rational[2, 25] Pi, Rational[3, 25] Pi}, {
+     Rational[1, 36] Pi, Rational[1, 18] Pi, Rational[1, 12] Pi}}, {{
+     Rational[1, 64] Pi, Rational[1, 16] Pi, Rational[9, 64] Pi}, {
+     Rational[1, 125] Pi, Rational[4, 125] Pi, Rational[9, 125] Pi}, {
+     Rational[1, 216] Pi, Rational[1, 54] Pi, Rational[1, 24] Pi}}, {{
+     Rational[1, 625] Pi, Rational[8, 625] Pi, Rational[27, 625] Pi}, {
+     Rational[1, 1296] Pi, Rational[1, 162] Pi, Rational[1, 48] 
+      Pi}}}]]], "Output",
+ CellChangeTimes->{3.600627328431991*^9}]
+}, Open  ]]
+},
+WindowSize->{1115, 597},
+WindowMargins->{{12, Automatic}, {Automatic, 24}},
+Magnification->1.25,
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 496, 14, 53, "Input"],
+Cell[1044, 36, 644, 19, 58, "Input"],
+Cell[1691, 57, 203, 5, 33, "Input"],
+Cell[CellGroupData[{
+Cell[1919, 66, 502, 14, 33, "Input"],
+Cell[2424, 82, 2800, 78, 205, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5261, 165, 377, 11, 33, "Input"],
+Cell[5641, 178, 2701, 76, 205, "Output"]
+}, Open  ]],
+Cell[8357, 257, 676, 19, 53, "Input"],
+Cell[9036, 278, 947, 29, 80, "Input"],
+Cell[CellGroupData[{
+Cell[10008, 311, 741, 19, 33, "Input"],
+Cell[10752, 332, 6789, 193, 321, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17578, 530, 599, 17, 33, "Input"],
+Cell[18180, 549, 6695, 192, 321, "Output"]
+}, Open  ]],
+Cell[24890, 744, 678, 19, 53, "Input"],
+Cell[25571, 765, 919, 28, 82, "Input"],
+Cell[CellGroupData[{
+Cell[26515, 797, 545, 16, 33, "Input"],
+Cell[27063, 815, 6383, 184, 313, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[33483, 1004, 549, 16, 33, "Input"],
+Cell[34035, 1022, 6352, 183, 293, "Output"]
+}, Open  ]],
+Cell[40402, 1208, 613, 16, 72, "Input"],
+Cell[41018, 1226, 965, 30, 80, "Input"],
+Cell[CellGroupData[{
+Cell[42008, 1260, 594, 17, 33, "Input"],
+Cell[42605, 1279, 11063, 325, 367, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[53705, 1609, 549, 16, 33, "Input"],
+Cell[54257, 1627, 11040, 324, 367, "Output"]
+}, Open  ]],
+Cell[65312, 1954, 611, 16, 72, "Input"],
+Cell[65926, 1972, 925, 28, 82, "Input"],
+Cell[CellGroupData[{
+Cell[66876, 2004, 549, 16, 33, "Input"],
+Cell[67428, 2022, 9893, 281, 367, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[77358, 2308, 547, 16, 33, "Input"],
+Cell[77908, 2326, 9861, 280, 367, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

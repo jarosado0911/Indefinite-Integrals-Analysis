@@ -1,0 +1,542 @@
+(* Content-type: application/mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 7.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       145,          7]
+NotebookDataLength[     15861,        533]
+NotebookOptionsPosition[     14788,        493]
+NotebookOutlinePosition[     15145,        509]
+CellTagsIndexPosition[     15102,        506]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "19"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+     RowBox[{
+     "Integral", " ", "19", " ", "has", " ", "been", " ", "verified", " ", 
+      "for", " ", "r"}], " ", "\[Element]", 
+     RowBox[{"[", 
+      RowBox[{"0", ",", "\[Infinity]"}]}]}], ")"}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.601242734841036*^9, 3.6012427434505243`*^9}, {
+  3.601243071220049*^9, 3.60124308618535*^9}, {3.601243191785202*^9, 
+  3.60124323516418*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Int19", "[", "r_", "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "x", "]"}]}]], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.601242756871848*^9, 3.601242760488453*^9}, {
+  3.601242792795611*^9, 3.601242889017475*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Table", "[", 
+  RowBox[{
+   RowBox[{"Int19", "[", "r", "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"r", ",", "0", ",", "1", ",", ".2"}], "}"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.601242880815576*^9, 3.601242904878837*^9}}],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"2", " ", "\[Pi]"}], ",", 
+   RowBox[{"6.283185307179586`", "\[InvisibleSpace]", "+", 
+    RowBox[{"0.`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"6.283185307179586`", "\[InvisibleSpace]", "+", 
+    RowBox[{"0.`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"6.283185307179586`", "\[InvisibleSpace]", "+", 
+    RowBox[{"0.`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"6.283185307179586`", "\[InvisibleSpace]", "+", 
+    RowBox[{"0.`", " ", "\[ImaginaryI]"}]}], ",", 
+   RowBox[{"6.283185307179586`", "\[InvisibleSpace]", "+", 
+    RowBox[{"0.`", " ", "\[ImaginaryI]"}]}]}], "}"}]], "Output",
+ CellChangeTimes->{3.601243057713072*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"(*", 
+   RowBox[{"Verify", " ", "Integral", " ", "20"}], "*)"}], 
+  "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{"Verified", " ", "for", " ", "all", " ", 
+    RowBox[{"n", "'"}], "s", " ", "but", " ", "only", " ", "valid", " ", 
+    "for", " ", "even", " ", 
+    RowBox[{"r", "'"}], "s"}], "*)"}], "\[IndentingNewLine]", 
+  RowBox[{"(*", 
+   RowBox[{
+    RowBox[{
+    "warning", " ", "takes", " ", "a", " ", "very", " ", "long", " ", 
+     "time"}], ",", " ", 
+    RowBox[{
+     RowBox[{"overnightish", "!!"}], "!"}]}], "*)"}]}]], "Input",
+ CellChangeTimes->{{3.60124312114042*^9, 3.60124313454428*^9}, {
+  3.601489928652637*^9, 3.601489965824498*^9}, {3.601490148864299*^9, 
+  3.601490163342381*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int20", "[", 
+   RowBox[{"r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "x", "]"}]}]], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "]"}], "*", 
+    RowBox[{"Cos", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns20", "[", 
+   RowBox[{"r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"r", "^", "n"}], "/", 
+    RowBox[{"n", "!"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.601243139345153*^9, 3.601243179841939*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Int20", "[", 
+     RowBox[{"r", ",", "n"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "8"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.6012432591498337`*^9, 3.601243290391921*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "0", "0"},
+    {"\[Pi]", 
+     FractionBox["\[Pi]", "2"], "0", "0"},
+    {
+     RowBox[{"2", " ", "\[Pi]"}], 
+     RowBox[{"2", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"3", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], "0", "0"},
+    {
+     RowBox[{"4", " ", "\[Pi]"}], 
+     RowBox[{"8", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"5", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"25", " ", "\[Pi]"}], "2"], "0", "0"},
+    {
+     RowBox[{"6", " ", "\[Pi]"}], 
+     RowBox[{"18", " ", "\[Pi]"}], 
+     RowBox[{"36", " ", "\[Pi]"}], 
+     RowBox[{"54", " ", "\[Pi]"}]},
+    {
+     RowBox[{"7", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"49", " ", "\[Pi]"}], "2"], "0", "0"},
+    {
+     RowBox[{"8", " ", "\[Pi]"}], 
+     RowBox[{"32", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"256", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"512", " ", "\[Pi]"}], "3"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.601250256742365*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"IntAns20", "[", 
+     RowBox[{"r", ",", "n"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "8"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.6014897671497583`*^9, 3.601489779147502*^9}, {
+  3.601489836583386*^9, 3.601489838469606*^9}, {3.601489880077476*^9, 
+  3.601489880419361*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "0", "0"},
+    {"\[Pi]", 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "6"], 
+     FractionBox["\[Pi]", "24"]},
+    {
+     RowBox[{"2", " ", "\[Pi]"}], 
+     RowBox[{"2", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"3", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"27", " ", "\[Pi]"}], "8"]},
+    {
+     RowBox[{"4", " ", "\[Pi]"}], 
+     RowBox[{"8", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"5", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"25", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"125", " ", "\[Pi]"}], "6"], 
+     FractionBox[
+      RowBox[{"625", " ", "\[Pi]"}], "24"]},
+    {
+     RowBox[{"6", " ", "\[Pi]"}], 
+     RowBox[{"18", " ", "\[Pi]"}], 
+     RowBox[{"36", " ", "\[Pi]"}], 
+     RowBox[{"54", " ", "\[Pi]"}]},
+    {
+     RowBox[{"7", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"49", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"343", " ", "\[Pi]"}], "6"], 
+     FractionBox[
+      RowBox[{"2401", " ", "\[Pi]"}], "24"]},
+    {
+     RowBox[{"8", " ", "\[Pi]"}], 
+     RowBox[{"32", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"256", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"512", " ", "\[Pi]"}], "3"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{{3.601489772872184*^9, 3.60148978834763*^9}, 
+   3.6014898396203737`*^9, 3.6014898811206827`*^9}]
+}, Open  ]],
+
+Cell[BoxData[
+ RowBox[{"(*", 
+  RowBox[{"Verify", " ", "Integral", " ", "21"}], "*)"}]], "Input",
+ CellChangeTimes->{{3.6014899893881207`*^9, 3.6014899944987497`*^9}}],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"Int21", "[", 
+   RowBox[{"r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{
+   SubsuperscriptBox["\[Integral]", 
+    RowBox[{"-", "Pi"}], "Pi"], 
+   RowBox[{
+    SuperscriptBox["\[ExponentialE]", 
+     RowBox[{"r", "*", 
+      RowBox[{"Cos", "[", "x", "]"}]}]], "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"r", "*", 
+      RowBox[{"Sin", "[", "x", "]"}]}], "]"}], "*", 
+    RowBox[{"Sin", "[", 
+     RowBox[{"n", "*", "x"}], "]"}], 
+    RowBox[{"\[DifferentialD]", "x"}]}]}]}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"IntAns21", "[", 
+   RowBox[{"r_", ",", "n_"}], "]"}], ":=", 
+  RowBox[{"Pi", "*", 
+   RowBox[{
+    RowBox[{"r", "^", "n"}], "/", 
+    RowBox[{"n", "!"}]}]}]}]}], "Input",
+ CellChangeTimes->{{3.601490031071986*^9, 3.6014900430195847`*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"Int21", "[", 
+     RowBox[{"r", ",", "n"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "8"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.601490069197921*^9, 3.601490069398251*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "0", "0"},
+    {"\[Pi]", 
+     FractionBox["\[Pi]", "2"], "0", 
+     FractionBox["\[Pi]", "24"]},
+    {
+     RowBox[{"2", " ", "\[Pi]"}], 
+     RowBox[{"2", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"3", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], "0", 
+     FractionBox[
+      RowBox[{"27", " ", "\[Pi]"}], "8"]},
+    {
+     RowBox[{"4", " ", "\[Pi]"}], 
+     RowBox[{"8", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"5", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"25", " ", "\[Pi]"}], "2"], "0", "0"},
+    {
+     RowBox[{"6", " ", "\[Pi]"}], 
+     RowBox[{"18", " ", "\[Pi]"}], 
+     RowBox[{"36", " ", "\[Pi]"}], 
+     RowBox[{"54", " ", "\[Pi]"}]},
+    {
+     RowBox[{"7", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"49", " ", "\[Pi]"}], "2"], "0", "0"},
+    {
+     RowBox[{"8", " ", "\[Pi]"}], 
+     RowBox[{"32", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"256", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"512", " ", "\[Pi]"}], "3"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.601494318529275*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"Table", "[", 
+   RowBox[{
+    RowBox[{"IntAns21", "[", 
+     RowBox[{"r", ",", "n"}], "]"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"r", ",", "0", ",", "8"}], "}"}], ",", 
+    RowBox[{"{", 
+     RowBox[{"n", ",", "1", ",", "4"}], "}"}]}], "]"}], "//", 
+  "TableForm"}]], "Input",
+ CellChangeTimes->{{3.601494949668749*^9, 3.6014949501016397`*^9}}],
+
+Cell[BoxData[
+ TagBox[GridBox[{
+    {"0", "0", "0", "0"},
+    {"\[Pi]", 
+     FractionBox["\[Pi]", "2"], 
+     FractionBox["\[Pi]", "6"], 
+     FractionBox["\[Pi]", "24"]},
+    {
+     RowBox[{"2", " ", "\[Pi]"}], 
+     RowBox[{"2", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"4", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"2", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"3", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"9", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"27", " ", "\[Pi]"}], "8"]},
+    {
+     RowBox[{"4", " ", "\[Pi]"}], 
+     RowBox[{"8", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"32", " ", "\[Pi]"}], "3"]},
+    {
+     RowBox[{"5", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"25", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"125", " ", "\[Pi]"}], "6"], 
+     FractionBox[
+      RowBox[{"625", " ", "\[Pi]"}], "24"]},
+    {
+     RowBox[{"6", " ", "\[Pi]"}], 
+     RowBox[{"18", " ", "\[Pi]"}], 
+     RowBox[{"36", " ", "\[Pi]"}], 
+     RowBox[{"54", " ", "\[Pi]"}]},
+    {
+     RowBox[{"7", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"49", " ", "\[Pi]"}], "2"], 
+     FractionBox[
+      RowBox[{"343", " ", "\[Pi]"}], "6"], 
+     FractionBox[
+      RowBox[{"2401", " ", "\[Pi]"}], "24"]},
+    {
+     RowBox[{"8", " ", "\[Pi]"}], 
+     RowBox[{"32", " ", "\[Pi]"}], 
+     FractionBox[
+      RowBox[{"256", " ", "\[Pi]"}], "3"], 
+     FractionBox[
+      RowBox[{"512", " ", "\[Pi]"}], "3"]}
+   },
+   GridBoxAlignment->{
+    "Columns" -> {{Left}}, "ColumnsIndexed" -> {}, "Rows" -> {{Baseline}}, 
+     "RowsIndexed" -> {}},
+   GridBoxSpacings->{"Columns" -> {
+       Offset[0.27999999999999997`], {
+        Offset[0.7]}, 
+       Offset[0.27999999999999997`]}, "ColumnsIndexed" -> {}, "Rows" -> {
+       Offset[0.2], {
+        Offset[0.4]}, 
+       Offset[0.2]}, "RowsIndexed" -> {}}],
+  Function[BoxForm`e$, 
+   TableForm[BoxForm`e$]]]], "Output",
+ CellChangeTimes->{3.601494950515094*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.6014950074423637`*^9, 3.6014950946682167`*^9}, {
+   3.601495158771718*^9, 3.601495160611762*^9}, 3.601495271062508*^9}]
+},
+WindowSize->{971, 532},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
+Magnification->2.,
+FrontEndVersion->"7.0 for Mac OS X x86 (32-bit) (November 11, 2008)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[545, 20, 558, 15, 107, "Input"],
+Cell[1106, 37, 537, 15, 112, "Input"],
+Cell[CellGroupData[{
+Cell[1668, 56, 250, 6, 76, "Input"],
+Cell[1921, 64, 688, 14, 107, "Output"]
+}, Open  ]],
+Cell[2624, 81, 743, 19, 167, "Input"],
+Cell[3370, 102, 788, 24, 147, "Input"],
+Cell[CellGroupData[{
+Cell[4183, 130, 377, 11, 76, "Input"],
+Cell[4563, 143, 1691, 56, 421, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6291, 204, 478, 13, 107, "Input"],
+Cell[6772, 219, 2165, 71, 425, "Output"]
+}, Open  ]],
+Cell[8952, 293, 167, 3, 76, "Input"],
+Cell[9122, 298, 790, 24, 147, "Input"],
+Cell[CellGroupData[{
+Cell[9937, 326, 375, 11, 76, "Input"],
+Cell[10315, 339, 1776, 59, 421, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12128, 403, 380, 11, 107, "Input"],
+Cell[12511, 416, 2090, 70, 425, "Output"]
+}, Open  ]],
+Cell[14616, 489, 168, 2, 54, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
